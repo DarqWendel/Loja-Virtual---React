@@ -1,0 +1,169 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Cor de fundo geral */
+body {
+  background-color: #121212;  /* Fundo escuro */
+  color: #e0e0e0;  /* Texto claro */
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #000000, #2a2a2a); /* Gradiente sutil de fundo */
+  animation: gradientAnimation 10s ease infinite; /* Animação do gradiente */
+}
+
+/* Animação do gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(135deg, #000000, #2a2a2a);
+  }
+  50% {
+    background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+  }
+  100% {
+    background: linear-gradient(135deg, #000000, #2a2a2a);
+  }
+}
+
+/* Container do formulário de login */
+.login-form {
+  background-color: #1f1f1f;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 1s ease-out; /* Animação de entrada */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título do login */
+.login-form h2 {
+  font-size: 28px;
+  color: #00ff99;  /* Verde neon */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  animation: textGlow 1.5s ease-in-out infinite alternate; /* Efeito de brilho no título */
+}
+
+/* Efeito de brilho no título */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+  }
+  100% {
+    text-shadow: 0 0 10px #00ff99, 0 0 15px #00ff99, 0 0 20px #00ff99;
+  }
+}
+
+/* Estilo para os campos de entrada */
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  background-color: #444;
+  box-shadow: 0 0 10px #00ff99; /* Efeito de foco com brilho verde */
+  outline: none;
+}
+
+/* Estilo do botão de login */
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #00bfff;  /* Azul claro */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-form button:hover {
+  background-color: #0099cc;  /* Azul escuro */
+  transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilo do link de cadastro ou outro */
+.login-form a {
+  display: block;
+  margin-top: 20px;
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.login-form a:hover {
+  color: #0099cc;
+  text-decoration: underline;
+}
+
+/* Animando o fundo quando o foco no botão de login */
+@keyframes buttonFocus {
+  0% {
+    background-color: #00bfff;
+  }
+  100% {
+    background-color: #0099cc;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .login-form {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .login-form h2 {
+    font-size: 24px;
+  }
+
+  .login-form input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .login-form button {
+    font-size: 16px;
+  }
+}
+
